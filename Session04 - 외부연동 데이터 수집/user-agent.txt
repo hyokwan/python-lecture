@@ -1,0 +1,12 @@
+
+# 크롤링 헤더변경 필요
+headers = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',}
+data=requests.get(url,headers=headers)
+
+# 셀레니움 헤더변경 필요
+user_agent = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36'    
+options.add_argument('user-agent={0}'.format(user_agent))
+options.add_argument('headless')
+options.add_argument('window-size=1920x1080')
+options.add_argument("disable-gpu")
+driver = webdriver.Chrome(dirver_loc, options=options)
